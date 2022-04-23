@@ -1,0 +1,36 @@
+{
+  "name": "users",
+  "version": "1.0.0",
+  "description": "Management microservice for users.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "debug": "node --nolazy server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/microsoft/mindaro.git"
+  },
+  "author": "Bridge to Kubernetes",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^3.2.3",
+    "body-parser": "^1.19.1",
+    "express": "^4.17.2",
+    "express-api-validator": "0.1.0",
+    "morgan": "^1.10.0",
+    "prebuild-install": "^7.0.0",
+    "simple-get": "^4.0.1",
+    "tedious": "14.1.0",
+    "util": "0.12.4",
+    "validate.js": "^0.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "bugs": {
+    "url": "https://github.com/microsoft/mindaro/issues"
+  },
+  "homepage": "https://github.com/microsoft/mindaro#readme"
+}

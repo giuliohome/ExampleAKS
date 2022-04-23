@@ -1,0 +1,17 @@
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+bikesharingweb:
+  ingress:
+    # annotations:
+    #   kubernetes.io/ingress.class: nginx 
+    hosts:
+      - dev-bikesharing.bikesharingweb.giuliohome.com  # Assumes deployment to the 'dev-bikesharing' namespace
+
+
+gateway:
+  ingress:
+    # annotations:
+    #   kubernetes.io/ingress.class: nginx 
+    hosts:
+      - dev-bikesharing.gateway.giuliohome.com  # Assumes deployment to the 'dev-bikesharing' namespace
