@@ -134,7 +134,7 @@ export default class CompleteReturn extends Component {
                         </div>
                         <MediaQuery minWidth={600}>
                             <div className="divider">
-                                <FormButton primary disabled={!this.state.isLoaded} onClick={this.handleClick.bind(this)}>Confirm return</FormButton>
+                                <FormButton primary disabled={!this.state.isLoaded} onClick={this.handleClick.bind(this)}>Give feedback</FormButton>
                             </div>
                         </MediaQuery>
                     </div>

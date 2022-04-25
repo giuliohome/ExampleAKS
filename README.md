@@ -7,17 +7,17 @@
 
 ## Helm v3 
 
-Enable ingress controller (but notice that the application gateway is quite expensinve in Azure).
+Instead of enabling the ingress controller (notice that the level 7 application gateway is quite expensinve in Azure), we can use [the IP and DNS label](https://docs.microsoft.com/en-us/azure/aks/ingress-static-ip?tabs=azure-cli#ip-and-dns-label).
 
 
 ```
-helm install nginx-ingress nginx-stable/nginx-ingress --create-namespace --namespace dev-bikesharing 
+helm install nginx-ingress nginx-stable/nginx-ingress --create-namespace --namespace dev-bikesharing --set controller.service.loadBalancerIP=52.154.208.72
 helm install bikesharing . --dependency-update --namespace dev-bikesharing --atomic --wait 
 ```
 
 # Online Demo
 
-I can put the AKS cloudnative demo [online](http://dev-bikesharing.bikesharingweb.giuliohome.com/), thanks to the dns of Cloudflare site hosting, but I'll have to destroy it to ensure that the assets don't accumulate unwanted costs while sitting unused. It can be easily recreated via terraform and helm.
+I can put the AKS cloudnative demo [online](http://dev-bikesharing.bikesharingweb.giuliohome.com/), thanks to the dns of Cloudflare site hosting, but I'll have to destroy it to ensure that the assets don't accumulate unwanted costs while sitting unused. It can be easily recreated via [terraform](https://docs.microsoft.com/en-us/azure/developer/terraform/create-k8s-cluster-with-tf-and-aks) and helm.
 
 
 
