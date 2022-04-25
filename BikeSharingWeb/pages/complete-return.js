@@ -121,7 +121,7 @@ export default class CompleteReturn extends Component {
                 <Content>
                     <div className="details-container">
                         <Map />
-                        <div className="title" tabIndex="0">{this.state.bike.model ? `You're returning a ${this.state.bike.model}` : ``}</div>
+                        <div className="title" tabIndex="0">{this.state.bike.model ? `You've returned a ${this.state.bike.model}` : ``}</div>
                         <Field label="Pick-up/return address" value={this.state.bike.address} />
                         <div className="row">
                             <div className="col">
@@ -142,7 +142,7 @@ export default class CompleteReturn extends Component {
                 </Content>
                 <MediaQuery maxWidth={600}>
                     <Footer>
-                        <FormButton primary disabled={!this.state.isLoaded} onClick={this.handleClick.bind(this)}>Confirm return</FormButton>
+                        <FormButton primary disabled={!this.state.isLoaded} onClick={this.handleClick.bind(this)}>Give feedback</FormButton>
                     </Footer>
                 </MediaQuery>
                 <style jsx>{`
