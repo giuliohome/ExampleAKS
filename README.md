@@ -7,13 +7,17 @@
 
 ## Helm v3 
 
+Enable ingress controller (but notice that the application gateway is quite expensinve in Azure).
+
+
 ```
+helm install nginx-ingress nginx-stable/nginx-ingress --create-namespace --namespace dev-bikesharing 
 helm install bikesharing . --dependency-update --namespace dev-bikesharing --atomic --wait 
 ```
 
 # Online Demo
 
-Enjoy the AKS cloudnative demo [online](http://dev-bikesharing.bikesharingweb.giuliohome.com/), thanks to the dns of Cloudflare site hosting
+I can put the AKS cloudnative demo [online](http://dev-bikesharing.bikesharingweb.giuliohome.com/), thanks to the dns of Cloudflare site hosting, but I'll have to destroy it to ensure that the assets don't accumulate unwanted costs while sitting unused. It can be easily recreated via terraform and helm.
 
 
 
