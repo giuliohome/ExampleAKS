@@ -7,8 +7,8 @@ apiName: gateway
 fullnameOverride: bikesharingweb
 replicaCount: 1
 image:
-  repository: azdspublic/bikesharing-bikesharingweb
-  tag: build.20200723.1
+  repository: giuliohome/bikesharingweb
+  tag: "20220425.2"
   pullPolicy: IfNotPresent
 imagePullSecrets: []
   # Optionally specify an array of imagePullSecrets.
